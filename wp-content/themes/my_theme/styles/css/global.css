@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*General Styles*/
 .relative-container.elementor-element {
   position: relative;
@@ -35,25 +36,42 @@
 .ast-container {
   margin-top: 5rem; }
 
+.card-container {
+  display: flex;
+  justify-content: center;
+  /* Centra el contenido horizontalmente */ }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Tres columnas de igual tamaño */
+  gap: 20px;
+  /* Espacio entre las tarjetas */
+  list-style: none;
+  padding: 0; }
+
 .card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  list-style-type: none;
-  padding-bottom: 3rem;
-  width: fit-content;
-  margin-bottom: 2em; }
+  background-color: #fff;
+  /* Fondo blanco para las tarjetas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Sombra suave */
+  transition: box-shadow 0.3s ease;
+  /* Transición suave */
+  overflow: hidden;
+  /* Evita que el contenido desborde */ }
 
-/* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Sombra más pronunciada al pasar el mouse */ }
 
-/* Add some padding inside the card container */
 .container {
-  padding: 2px 16px; }
+  padding: 16px;
+  /* Espaciado interno del contenedor */ }
 
 .card img {
   max-width: 100%;
+  /* Imagen ajustada al 100% del contenedor */
   height: auto;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  /* Centra la imagen horizontalmente */ }

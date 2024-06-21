@@ -44,3 +44,7 @@ function my_theme_logo_class($html)
     return $html;
 }
 add_filter('get_custom_logo', 'my_theme_logo_class');
+function enqueue_global_styles() {
+    wp_enqueue_style('global-styles', get_template_directory_uri() . '/global.css');
+}
+add_action('wp_enqueue_scripts', 'enqueue_global_styles');
