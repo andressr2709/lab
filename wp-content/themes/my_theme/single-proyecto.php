@@ -33,7 +33,6 @@ get_header(); ?>
 			<div>
 
 				<?php the_content(); ?>
-				<p><?php echo get_field('nombre'); ?></p>
 				<p><?php echo get_field('descripcion'); ?></p>
 
 				<?php $foto = get_field('imagen'); ?>
