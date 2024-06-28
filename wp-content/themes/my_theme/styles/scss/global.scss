@@ -42,6 +42,25 @@
 
 }
 
+.model-container, .image-container {
+    text-align: center; /* Centra los elementos */
+    margin: 20px 0; /* Añade un margen arriba y abajo */
+}
+
+.model-iframe {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor padre */
+    height: 800px; /* Ajusta la altura según tus necesidades */
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra el iframe */
+}
+
+.foto-proyecto {
+    width: 80%; /* Ajusta el tamaño según tus necesidades */
+    max-width: 100%; /* Asegura que no exceda el ancho del contenedor padre */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
 .ast-container{
     margin-top:5rem;
 }

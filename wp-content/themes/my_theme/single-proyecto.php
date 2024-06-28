@@ -8,7 +8,7 @@
  * @since 1.0.0
  */
 
-if (!defined('ABSPATH')) {
+ if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 
@@ -34,15 +34,27 @@ get_header(); ?>
 
 				<?php the_content(); ?>
 				<p><?php echo get_field('descripcion'); ?></p>
-
-				<?php $foto = get_field('imagen'); ?>
-				<img class="foto-proyecto" src="<?php echo $foto['url'] ?>" alt="<?php echo $foto['alt'] ?>">
+				
+				<?php 
+				$model = get_field('sketchfab_url'); 
+				if ($model): ?>
+					<div class="model-container">
+						<iframe class="model-iframe" src="<?php echo esc_url($model); ?>/embed" frameborder="0"></iframe>
+					</div>
+				<?php endif; ?>
+				
+				<?php 
+				$foto = get_field('imagen'); 
+				if ($foto): ?>
+					<div class="image-container">
+						<img class="foto-proyecto" src="<?php echo esc_url($foto['url']); ?>" alt="<?php echo esc_attr($foto['alt']); ?>">
+					</div>
+				<?php endif; ?>
 
 			</div>
 		<?php endwhile; endif; ?>
 
-		<?php astra_primary_content_bottom(); ?>
-
+	<?php astra_primary_content_bottom(); ?>
 
 </div><!-- #primary -->
 

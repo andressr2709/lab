@@ -33,6 +33,28 @@
   .slicknav_menu {
     display: block; } }
 
+.model-container, .image-container {
+  text-align: center;
+  /* Centra los elementos */
+  margin: 20px 0;
+  /* Añade un margen arriba y abajo */ }
+
+.model-iframe {
+  width: 80%;
+  /* Ajusta el tamaño según tus necesidades */
+  height: 500px;
+  /* Ajusta la altura según tus necesidades */
+  max-width: 100%;
+  /* Asegura que no exceda el ancho del contenedor padre */ }
+
+.foto-proyecto {
+  width: 80%;
+  /* Ajusta el tamaño según tus necesidades */
+  max-width: 100%;
+  /* Asegura que no exceda el ancho del contenedor padre */
+  height: auto;
+  /* Mantiene la proporción de la imagen */ }
+
 .ast-container {
   margin-top: 5rem; }
 
